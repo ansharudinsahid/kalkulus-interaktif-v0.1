@@ -1,0 +1,6 @@
+{
+  "name": "Kalkulus Interaktif",
+  "description": "Platform pembelajaran interaktif kalkulus, turunan, dan titik kritis dengan visualisasi grafik dinamis dalam Bahasa Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

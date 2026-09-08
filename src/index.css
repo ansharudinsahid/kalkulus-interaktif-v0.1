@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* MathJax Official TeX Web Fonts */
+@font-face {
+  font-family: 'MathJax_Main';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MathJax_Main';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MathJax_Math';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MathJax_Math';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MathJax_AMS';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Teachers', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-teachers: 'Teachers', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-math: 'MathJax_Math', 'MathJax_Main', 'MathJax_AMS', serif;
+}
+
+:root {
+  --font-teachers: 'Teachers', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-math: 'MathJax_Math', 'MathJax_Main', 'MathJax_AMS', serif;
+}
+
+html,
+body,
+#root {
+  font-family: var(--font-teachers);
+}
+
+/* Set default font on SVG text to Teachers */
+svg text {
+  font-family: var(--font-teachers);
+}
+
+/* Font dedicated strictly for mathematical symbols, variables, and formulas */
+.font-math,
+svg text.font-math {
+  font-family: var(--font-math) !important;
+}
+
+/* MathJax container styling */
+mjx-container {
+  display: inline-block !important;
+  margin: 0 !important;
+  color: inherit !important;
+  outline: none !important;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block !important;
+  text-align: center !important;
+  margin: 0.25rem 0 !important;
+}
